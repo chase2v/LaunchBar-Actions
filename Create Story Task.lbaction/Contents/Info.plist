@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>me.wchen.omnifocus</string>
+	<key>CFBundleIconFile</key>
+	<string></string>
+	<key>LBTextInputTitle</key>
+	<string>Title</string>
+	<key>CFBundleName</key>
+	<string>Omnifocus: Add Story Action</string>
+	<key>LBAbbreviation</key>
+	<string>asa</string>
+	<key>LBDebugLogEnabled</key>
+	<true/>
+	<key>CFBundleVersion</key>
+	<string>0.0.1</string>
+	<key>LBScripts</key>
+	<dict>
+		<key>LBDefaultScript</key>
+		<dict>
+			<key>LBAcceptedArgumentTypes</key>
+			<array>
+				<string>string</string>
+			</array>
+			<key>LBScriptName</key>
+			<string>run.js</string>
+			<key>LBReturnsResult</key>
+			<true/>
+			<key>LBLiveFeedbackEnabled</key>
+			<false/>
+			<key>LBRequiresArgument</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>LBDescription</key>
+	<dict>
+		<key>LBAuthor</key>
+		<string>wchen</string>
+		<key>LBWebsite</key>
+		<string>https://github.com/vvangchen/add-story-task</string>
+		<key>LBSummary</key>
+		<string>Add a story action to omnifocus 3.</string>
+	</dict>
+
+</dict>
+</plist>
