@@ -29,7 +29,7 @@
 			<key>LBReturnsResult</key>
 			<true/>
 			<key>LBLiveFeedbackEnabled</key>
-			<false/>
+			<true/>
 			<key>LBRequiresArgument</key>
 			<true/>
 		</dict>
