@@ -32,13 +32,13 @@ function runWithString(query) {
 }
 
 function create(query) {
-	const url = encodeURI(`omnifocus:///paste?target=/folder/c3fIdj74hVt&content=${query}: @autodone(true) @parallel(false)\n\t- 开发\n- 自测\n- 登记\n- 上车\n- Review\n- 验证\n- 发布\n- 回归`)
+	const url = encodeURI(`omnifocus:///paste?target=/folder/c3fIdj74hVt&content=${query}: @autodone(true) @parallel(false)\n\t- 开发\n- 自测\n- 登记\n- 上车\n- Review\n- 大巴车验证\n- master验证\n- 发布\n- 回归`)
 	
 	LaunchBar.openURL(url)
 }
 
 function createWithDeadline({ query, deadlineDate, deadlineTime = '21:00' }) {
-	const url = encodeURI(`omnifocus:///paste?target=/folder/c3fIdj74hVt&content=${query}: @autodone(true) @parallel(false) @due(${deadlineDate || new Date().toLocaleDateString().replace(/\//g, '-')} ${deadlineTime})\n\t- 开发\n- 自测\n- 登记\n- 上车\n- Review\n- 验证\n- 发布\n- 回归`)
+	const url = encodeURI(`omnifocus:///paste?target=/folder/c3fIdj74hVt&content=${query}: @autodone(true) @parallel(false) @due(${deadlineDate || new Date().toLocaleDateString().replace(/\//g, '-')} ${deadlineTime})\n\t- 开发\n- 自测\n- 登记\n- 上车\n- Review\n- 大巴车验证\n- master验证\n- 发布\n- 回归`)
 
 	LaunchBar.openURL(url)
 }
