@@ -9,20 +9,33 @@ function runWithString(query) {
 		}
 	]
 
-	const deadlineDate = query.match(/(\d{2,4}\-){1,2}\d{2}/) && query.match(/(\d{2,4}\-){1,2}\d{2}/)[0]
+	const inputDeadlineDate = query.match(/(\d{1,4}\-){1,2}\d{2}/) && query.match(/(\d{1,4}\-){1,2}\d{2}/)[0]
+	let outputDeadlineDate = inputDeadlineDate;
+	if (inputDeadlineDate) {
+		outputDeadlineDate = inputDeadlineDate
+			.split('-')
+			.map(unit => {
+				if (unit.length < 2) {
+					unit  = '0' + unit
+				}
+				return unit;
+			})
+			.join('-')
+	}
 	const deadlineTime = query.match(/\d{2}\:\d{2}/) && query.match(/\d{2}\:\d{2}/)[0]
 
-	if (deadlineDate || deadlineTime) {
-		if (deadlineDate) query = query.replace(deadlineDate, '')
+	if (outputDeadlineDate || deadlineTime) {
+		if (outputDeadlineDate) query = query.replace(inputDeadlineDate, '')
 		if (deadlineTime) query = query.replace(deadlineTime, '')
 		
 		result.push({
 			title: '创建并设置截止日',
-			subtitle: deadlineDate + deadlineTime,
+			subtitle: query + ' ' + outputDeadlineDate + '' + deadlineTime,
+			alwaysShowsSubtitle: true,
 			action: 'createWithDeadline',
 			actionArgument: {
 				query,
-				deadlineDate,
+				deadlineDate: outputDeadlineDate,
 				deadlineTime
 			}
 		})
